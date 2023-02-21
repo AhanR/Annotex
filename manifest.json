@@ -1,0 +1,26 @@
+{
+    "name": "Annotex",
+    "version": "1.0.0",
+    "description": "Annotate on any screen",
+    "manifest_version": 3,
+    "author": "Ahan Ray",
+    "action":{
+        "default_popup": "src/index.html",
+        "default_title": "Annotex - Annotation"
+    },
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "content_scripts": [
+        {
+            "matches" : ["<all_urls>"],
+            "js" : ["src/annotex.js"],
+            "css" : ["src/annotex.css"]
+        }
+    ],
+    "icons" : {
+        "32" : "media/annotex-logo32.png",
+        "128" : "media/annotex-logo128.png"
+    }
+}
